@@ -1,4 +1,5 @@
 function getAndPrintHTMLChunks () {
+  var https = require('https');
 
   var requestOptions = {
     host: 'sytantris.github.io',
@@ -15,4 +16,13 @@ function getAndPrintHTMLChunks () {
     console.log('Chunk Received. Length:', data.length);
   });
 
+  // the callback is invoked when all of the data has been received
+  // (the `end` of the stream)
+  response.on('end', function() {
+    console.log('Response stream complete.');
+  });
+
+});
+
 }
+getAndPrintHTMLChunks();
