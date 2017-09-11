@@ -1,5 +1,7 @@
-var getHTML = require('./http-functions');
-//var printHTML = require('./http-functions');
+var myMethods = require('./http-functions');
+var getHTML = myMethods.method1;
+var printHTML = myMethods.method2;
+
 
 var requestOptions = {
   host: 'sytantris.github.io',

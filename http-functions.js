@@ -1,4 +1,4 @@
-module.exports = function getHTML (options, callback) {
+exports.method1 = function getHTML (options, callback) {
   var https = require('https');
 
   function process(response){
@@ -19,7 +19,7 @@ https.request(options, process).end();
 
 }
 
-function printHTML(html){
+exports.method2 = function printHTML(html){
 
   console.log(html);
 }
